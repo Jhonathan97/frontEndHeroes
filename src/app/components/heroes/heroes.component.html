@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row col">
+    <div
+      class="card m-3"
+      style="width: 11rem"
+      *ngFor="let heroe of heroes; index as i"
+    >
+      <img src="{{ heroes[i].image.url }}" class="card-img-top" width="150" />
+      <div class="card-body">
+        <h5 class="card-title">Nombre de  Heroe: {{ heroes[i].name }}</h5>
+        <p class="card-text">Idendtificador: {{ heroes[i].id}}</p>
+        <a href="#" class="btn btn-primary btn-block">Conoce a: {{ heroes[i].name }} </a>
+      </div>
+    </div>
+  </div>
+</div>
+

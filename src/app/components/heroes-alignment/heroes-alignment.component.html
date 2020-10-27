@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>HEROES SEGUN SU ALINEACION</h1>
+  <form (submit)="submitData(alignment)">
+    <div class="form-group">
+      <input
+        type="text"
+        placeholder="Digite la alineacion que desea: bad,good o all"
+        class="form-control"
+        #alignment
+      />
+    </div>
+    <button class="btn btn-primary btn-block mt-2">Obtener Heroes</button>
+  </form>
+  <div class="row col">
+    <div
+      class="card m-3"
+      style="width: 11rem"
+      *ngFor="let heroe of heroes; index as i"
+    >
+      <img src="{{ heroes[i].image.url }}" class="card-img-top" width="150" />
+      <div class="card-body">
+        <h5 class="card-title">Nombre de Heroe: {{ heroes[i].name }}</h5>
+        <p class="card-text">Idendtificador: {{ heroes[i].id }}</p>
+        <a href="#" class="btn btn-primary btn-block"
+          >Conoce a: {{ heroes[i].name }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

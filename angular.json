@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AppHeroes"
+    }
+  },
+  "defaultProject": "AppHeroes",
+  "cli": {
+    "analytics": false
+  }
 }
